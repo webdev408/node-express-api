@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit</title>
+</head>
+
+<body>
+  <h1>Edit</h1>
+
+  <form action="/products/<%=product.id%>/edit" method="post">
+    <label for="image">Image:</label>
+    <input type="text" name="image" value="<%=product.image%>">
+    <label for="name">Name:</label>
+    <input type="text" name="name" value="<%=product.name%>">
+    <label for="price">Price:</label>
+    <input type="text" name="price" value="<%=product.price%>">
+    <button type="submit">Save</button>
+    <a href="/products">Back to list</a>
+  </form>
+
+</body>
+
+</html>

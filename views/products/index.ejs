@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+  <title>Product List</title>
+</head>
+
+<body>
+  <h1 class="text-center my-4">Product List</h1>
+  <ul class=" list-group w-50 mx-auto">
+    <% for (let p of products) { %>
+      <li class="list-group-item bg-info text-light d-flex justify-content-between fs-2 p-3">
+        <img class="w-25 rounded mb-2" src="<%= p.image %>" alt="list">
+        <%= `${p.name} - $${p.price} ` %>
+          <a class="d-inline p-2 text-bg-primary" href="/products/<%= p.id %>">Details</a>
+      </li>
+      <% }%>
+  </ul>
+  <a class=" btn btn-success m-5" href="/products/new">New Product</a>
+</body>
+
+</html>
