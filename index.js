@@ -63,6 +63,7 @@ app.get("/products/:id/edit", (req, res) => {
   const product = products.find((p) => p.id === id);
   res.render("products/edit", { product });
 });
+// Handle the form submission to update a product
 app.post("/products/:id/edit", (req, res) => {
   const { id } = req.params;
   const { name, price, image } = req.body;
